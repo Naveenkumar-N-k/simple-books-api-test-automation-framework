@@ -1,0 +1,31 @@
+name: 'Simple Books API'
+on: workflow_dispatch
+jobs: 
+  test-files:
+    runs-on: windows-latest
+    steps:
+      - name: refer the repository   
+        uses: actions/checkout@v7
+        
+      - name: install node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: install dependencies
+        run: npm ci
+      
+      - name: run playwright tests
+        run: npm run test
+        env:
+          CLIENT_NAME: ${{secrets.CLIENT_NAME}}
+          CLIENT_EMAIL: ${{secrets.CLIENT_EMAIL}}
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
+
+      - name: test report
+        uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
