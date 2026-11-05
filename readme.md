@@ -11,6 +11,9 @@ The framework covers multiple API test scenarios across the following endpoints:
 - **Orders** - Testing order-related API operations.
 - **Authentication** - Testing authentication-related functionality.
 
+## Playwright Test Report
+[View the test execution report here](https://naveenkumar-n-k.github.io/simple-books-api-test-automation-framework/)
+
 ## Test Coverage
 The framework covers the following API endpoints and test scenarios:
 ### Endpoints
