@@ -6,7 +6,7 @@ The framework follows the **Service Object Model (SOM)** design pattern, promoti
 - **Scalability** - Easier to extend the framework to accommodate additional API endpoints & test scenarios.
 - **Maintainability** - Keeps the API service logic separate from test scripts for better organization & easier maintenance.
 
-The framework covers multiple API test scenarios across the following endpoints:
+The framework covers 20+ API test scenarios across the following endpoints:
 - **Books** - Testing book-related API operations.
 - **Orders** - Testing order-related API operations.
 - **Authentication** - Testing authentication-related functionality.
